@@ -25,7 +25,16 @@ export PATH=$PATH:/usr/local/go/bin
 rm -rf go1.16.5.linux-amd64.tar.gz
 }
 
+funtion install_dependencies () {
+DEPEN="git nftables iproute2"
+for pqts in ${DEPEN}; do
+echo -e "installing \033[0;32m$pqts\033[0m"
+apt-get install $pqts -y &> /dev/null
+done
+}
+
 function _install() {
+    install_dependencies
     install_go
     assert_command install
     assert_command nft
