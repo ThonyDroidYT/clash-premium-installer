@@ -22,6 +22,7 @@ function install_go () {
 wget https://golang.org/dl/go1.16.5.linux-amd64.tar.gz &> /dev/null
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.5.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
+rm -rf go1.16.5.linux-amd64.tar.gz
 }
 
 function _install() {
