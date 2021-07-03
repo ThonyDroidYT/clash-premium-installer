@@ -18,6 +18,10 @@ function assert_command() {
     fi
 }
 
+function install_clash () {
+wget https://golang.org/dl/go1.16.5.linux-amd64.tar.gz &> /dev/null
+}
+
 function _install() {
     assert_command install
     assert_command nft
