@@ -18,12 +18,12 @@ function assert_command() {
     fi
 }
 
-function install_clash () {
+function install_go () {
 wget https://golang.org/dl/go1.16.5.linux-amd64.tar.gz &> /dev/null
 }
 
 function _install() {
-    install_clash
+    install_go
     assert_command install
     assert_command nft
     assert_command ip
